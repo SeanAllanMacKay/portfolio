@@ -47,33 +47,6 @@ export default () => {
             </p>
             <SocialLinks />
         </div>
-        <form style={styles.formContainer}>
-            <div style={styles.sideBySide}>
-                <Input 
-                    title="First Name"
-                    name="firstName"
-                    style={{flex: 1}}
-                />
-                <Input 
-                    title="Last Name"
-                    name="lastName"
-                    style={{flex: 1}}
-                />
-            </div>
-            <Input 
-                title="Email"
-                name="email"
-            />
-            <Input 
-                title="Subject"
-                name="subject"
-            />
-            <Input 
-                textArea
-                name="body"
-            />
-            <Button style={styles.button}>Send</Button>
-        </form>
     </div>
   )
 }

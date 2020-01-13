@@ -64,12 +64,12 @@ const skills = [
     {
         title: 'React',
         description: "Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te. Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an. Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,an assueverit contentiones est.",
-        icon: <Icon component={ReactLogo} style={{fontSize: '6em', fill: 'green'}}/>,
+        icon: <Icon component={ReactLogo} style={{fontSize: '6em', color: '#A5037A'}}/>,
     },
     {
         title: 'Javascript',
         description: "Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te. Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an. Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,an assueverit contentiones est.",
-        icon: <Icon component={JavascriptLogo} style={{fontSize: '6em'}} fill='#ffffff'/>
+        icon: <Icon component={JavascriptLogo} style={{fontSize: '6em', color: '#A5037A'}}/>
     },
 ]
 
@@ -157,12 +157,14 @@ export default () => {
                 flexDirection: 'column',
                 flex: screenSize.large ? 3 : 1,
                 maxHeight: screenSize.large && '60vh',
+                padding: !screenSize.large && '0 60px 0 0'
             }}
         >
             <h2 
                 style={{
                     fontSize: '3em',
                     fontFamily: 'Lobster, Cursive',
+                    padding: !screenSize.large ? '0 0 0 10px' : 0
                 }}
             >
                 Skills
@@ -187,7 +189,7 @@ export default () => {
         <div 
             style={{
                 flex: 1,
-                marginTop: '30px',
+                marginTop: !screenSize.large ? '0 0 0 30px' : '30px',
             }}
         >
             <h2 
@@ -198,7 +200,11 @@ export default () => {
             >
                 Timeline
             </h2>
-            <div>
+            <div
+                style={{
+                    padding: '0 0 0 30px'
+                }}
+            >
                 {
                     timelineItems.map(({ title, dot, content, final }) => (
                         <TimelineItem
