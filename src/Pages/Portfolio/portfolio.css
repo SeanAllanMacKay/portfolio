@@ -1,0 +1,8 @@
+.ant-tabs,
+.ant-tabs-right-content{
+    padding-right: 0px !important
+}
+
+.ant-tabs-tab-active{
+    border: none !important
+}
