@@ -9,16 +9,16 @@ export default () => {
   const [screenSize] = useScreenSize();
 
   return(
-    <div 
+    <div
       style={{
-        display: 'flex', 
-        flexDirection: 'row', 
+        display: 'flex',
+        flexDirection: 'row',
         height: '100vh'
       }}
     >
-      <div 
+      <div
         style={{
-          padding: '30px', 
+          padding: '30px',
           flex: 1,
           overflow: 'auto'
         }}
@@ -31,16 +31,16 @@ export default () => {
             }}
             paused={false}
             style={{
-              transform: 'translateY(-50px)', 
+              transform: 'translateY(-50px)',
               opacity: 0
             }}
         >
-          <h1 
+          <h1
             style={{
-              margin: 0, 
+              margin: 0,
               lineHeight: '80%',
-              color: 'black', 
-              fontFamily: 'Lobster, Cursive', 
+              color: 'black',
+              fontFamily: 'Lobster, Cursive',
               fontSize: '6em',
             }}
           >
@@ -56,17 +56,17 @@ export default () => {
             }}
             paused={false}
             style={{
-              transform: 'translateX(-50px)', 
+              transform: 'translateX(-50px)',
               opacity: 0
             }}
         >
-          <h2 
+          <h2
             style={{
-              fontFamily: 'Raleway, Sans-Serif', 
+              fontFamily: 'Raleway, Sans-Serif',
               marginLeft:'60px',
               lineHeight: '110%',
-              fontSize: '3em', 
-              color: 'black', 
+              fontSize: '3em',
+              color: 'black',
             }}
           >
             WEB DEVELOPER
@@ -83,34 +83,31 @@ export default () => {
               opacity: 0,
             }}
         >
-          <div 
+          <div
             style={{
               marginTop: '50px',
             }}
           >
-            <p 
+            <p
               style={{
-                fontFamily: 'Roboto, Sans-Serif', 
-                fontSize: '1.65em', 
+                fontFamily: 'Roboto, Sans-Serif',
+                fontSize: '1.85em',
                 marginBottom: '50px'
               }}
             >
-              Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te.
-              Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an.
-              Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,
-              an assueverit contentiones est.
+              Hello person reading this, my name is Sean. I'm a fullstack web developer with an a special
+              affection for UI/UX design. That is to say, I make websites do cool stuff and look good doing it.
+
             </p>
-            <p 
+            <p
               style={{
-                fontFamily: 'Roboto, Sans-Serif', 
-                fontSize: '1.65em', 
+                fontFamily: 'Roboto, Sans-Serif',
+                fontSize: '1.85em',
                 marginBottom: '50px'
               }}
             >
-              Sea vituperata signiferumque id, et dico cibo sed. Wisi legimus no mel. Veri definitiones
-              has in, eros suscipiantur vel no. Ubique civibus periculis te mei, duo an timeam omittantur,
-              ea usu habeo necessitatibus. An has diam summo scribentur, at facete bonorum deserunt his,
-              dico lobortis corrumpit mel ex.
+              I'm not as good at writing about myself as I am writing about said websites, so if you're interested
+              in seeing some stuff I've done, just head on over and take a look at some of my projects.
             </p>
           </div>
         </TweenOne>
@@ -128,12 +125,12 @@ export default () => {
             }}
             paused={false}
             style={{
-              transform: 'translateX(50vw)', 
+              transform: 'translateX(50vw)',
               opacity: 0,
               flex: 1.15,
             }}
           >
-            <div 
+            <div
               style={{
                 width: '100%',
                 height: '100%',

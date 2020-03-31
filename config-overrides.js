@@ -12,7 +12,6 @@ module.exports = override(
         modifyVars: {
             '@primary-color': color.primary,
             '@menu-dark-bg': '#222222',
-            '@tabs-ink-bar-color': 'white'
         },
     }),
 );

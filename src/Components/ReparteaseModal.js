@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Button, Modal, Icon } from 'antd'
 
@@ -44,7 +44,7 @@ export default ({ open, onCancel }) => {
                         style={{
                             borderRadius: '20px',
                             flex: 1,
-                            border: '2px solid lightgrey'
+                            border: '3px solid darkgrey'
                         }}
                         frameBorder='0'
                     />
@@ -137,7 +137,7 @@ export default ({ open, onCancel }) => {
                         style={{
                             borderRadius: '20px',
                             flex: 1,
-                            border: '2px solid lightgrey'
+                            border: '3px solid darkgrey'
                         }}
                         frameBorder='0'
                     />

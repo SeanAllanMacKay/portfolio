@@ -15,7 +15,7 @@ export default ({ title, content, dot, final }) => {
                 justifyContent: 'flex-end'
             }}
         >
-            <div 
+            <div
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -23,21 +23,21 @@ export default ({ title, content, dot, final }) => {
                 }}
             >
                 {dot}
-                {!final && 
-                    <div 
+                {!final &&
+                    <div
                         style={{
-                            border: '1px solid gray', 
-                            flex: 1, 
-                            width: 0, 
+                            border: '1px solid gray',
+                            flex: 1,
+                            width: 0,
                             minHeight: '20px'
                         }}
                     />
                 }
             </div>
-            <div 
-                style={{ 
-                    display: 'flex', 
-                    flexDirection: 'column', 
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
                     flex: 1
                 }}
                 onMouseEnter={() => setOpen(true)}
@@ -61,7 +61,7 @@ export default ({ title, content, dot, final }) => {
                     <h3
                         style={{
                             margin: 0,
-                            fontSize: '1.5em',
+                            fontSize: '1.75em',
                             flexGrow: open ? 1 : 0,
                             transition: 'flex-grow 0.25s',
                             borderBottom: open && '1px solid darkgrey',
@@ -69,21 +69,21 @@ export default ({ title, content, dot, final }) => {
                     >
                         {title}
                     </h3>
-                </div>  
+                </div>
 
-                <div 
+                <div
                     ref={contentRef}
-                    style={{ 
+                    style={{
                         overflow: 'hidden',
                         height: open ? contentRef.current.scrollHeight : 0,
                         transition: 'height 0.25s',
-                        margin: '15px 45px'
+                        margin: '15px 0 0 45px'
                     }}
                 >
                     {content}
                 </div>
             </div>
-            
+
         </div>
     )
 }
