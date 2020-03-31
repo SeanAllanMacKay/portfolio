@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
+import useScreenSize from '../hooks/useScreenSize'
+
 export default ({ title, image, description, stack, libraries, links }) => {
     const [open, setOpen] = useState(false)
+    const [screenSize] = useScreenSize();
+
     useEffect(() => {
         setOpen(true)
     }, [])
@@ -9,7 +13,7 @@ export default ({ title, image, description, stack, libraries, links }) => {
         <div>
             <div
                 style={{
-                    height: '70vh',
+                    height: '50vh',
                     position: 'relative',
                     backgroundColor: '#A5037A'
                 }}
@@ -33,7 +37,7 @@ export default ({ title, image, description, stack, libraries, links }) => {
                         position: 'absolute',
                         bottom: '0',
                         right: '0',
-                        margin: '0 30px 0 0',
+                        margin: !screenSize.large ? '0 30px 0 0' : '0 15px 0 15px',
                         display: 'flex',
                         flexDirection: 'row',
                         alignItems: 'flex-end'
@@ -54,8 +58,8 @@ export default ({ title, image, description, stack, libraries, links }) => {
                     <h2
                         style={{
                             color: 'white',
-                            fontSize: '5em',
-                            margin: '0 0 -10px 0'
+                            fontSize: !screenSize.large ? '5em' : '2.5em',
+                            margin: !screenSize.large ? '0 0 -10px 0' : '0',
                         }}
                     >
                         {title}
@@ -65,10 +69,10 @@ export default ({ title, image, description, stack, libraries, links }) => {
             <div
                 style={{
                     display: 'flex',
-                    flexDirection: 'row',
+                    flexDirection: !screenSize.large ? 'row' : 'column-reverse',
                     padding: '30px',
                     borderRight: '1px solid lightgrey',
-                    minHeight: '30vh',
+                    minHeight: '50vh',
                     opacity: open ? 1 : 0,
                     transition: 'opacity 0.75s'
                 }}
@@ -191,13 +195,13 @@ export default ({ title, image, description, stack, libraries, links }) => {
                         Description
                     </h3>
 
-                    <p
+                    <div
                         style={{
-                            fontSize: '1.25em',
+                            fontSize: '1.45em',
                         }}
                     >
                         {description}
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
