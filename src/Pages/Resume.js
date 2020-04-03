@@ -13,17 +13,37 @@ import { ReactComponent as NodeLogo } from '../images/logos/nodejs.svg';
 import { ReactComponent as MongoLogo } from '../images/logos/mongodb.svg';
 import { ReactComponent as CssLogo } from '../images/logos/css.svg';
 
-import { ReactComponent as HippoCMMSLogo } from '../images/logos/HippoCMMSLogo.svg';
-
 import {
-    AccountBalance,
-    Edit,
     DesktopWindows,
     Laptop,
     School
 } from '@material-ui/icons'
 
 const { TabPane } = Tabs;
+
+const Card = ({ title, info, content }) => (
+    <div
+        style={{
+            borderBottom: '1px solid #d9d9d9',
+            padding: '20px',
+            margin: '0 0 20px 0'
+        }}
+    >
+        <h2 style={{margin: 0, fontSize: '23px'}}>{title}</h2>
+        {info ?
+            <>
+                {info.map(information => (
+                    <h3 style={{margin: 0, fontSize: '20px', color: 'grey'}}>{information}</h3>
+                ))}
+            </>
+            :
+            null
+        }
+        <p style={{fontSize: '17px', margin: '10px 0 0 0'}}>
+            {content}
+        </p>
+    </div>
+)
 
 const skills = [
     {
@@ -69,9 +89,17 @@ const timelineItems = [
         dot: <School style={{ margin: '0 10px 0 0' }} />,
         content:
             <div style={{display: 'flex', flexDirection: 'column'}}>
-                <h3 style={{margin: 0, fontSize: '22px'}}>Digital Media Certificate</h3>
-                <h3 style={{margin: 0, fontSize: '22px'}}>Advanced Academic Diploma</h3>
-                <p style={{fontSize: '17px'}}>kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f</p>
+                <Card
+                    title="College Sturgeon Heights Collegiate"
+                    info={["Digital Media Certificate", "Advanced Academic Diploma"]}
+                    content="kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f"
+                />
+
+                <Card
+                    title="Red River College"
+                    info={["Business Information Technology (BIT) Program"]}
+                    content="kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f"
+                />
             </div>
     },
     {
@@ -79,8 +107,11 @@ const timelineItems = [
         dot: <DesktopWindows style={{ margin: '0 10px 0 0' }}/>,
         content:
             <div style={{display: 'flex', flexDirection: 'column'}}>
-                <h3 style={{margin: 0, fontSize: '22px'}}>Freelancer</h3>
-                <p style={{fontSize: '17px'}}>kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f</p>
+                <Card
+                    title="HippoCMMS"
+                    info={["Co-Op Student",  "Software Developer"]}
+                    content="kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f"
+                />
             </div>
     },
     {
@@ -88,8 +119,11 @@ const timelineItems = [
         dot: <Laptop style={{ margin: '0 10px 0 0' }}/>,
         content:
             <div style={{display: 'flex', flexDirection: 'column'}}>
-                <a href='https://catalogue.rrc.ca/Programs/WPG/Fulltime/BUSGF-DP' target="_blank" rel="noopener noreferrer"><h3 style={{margin: 0, fontSize: '22px'}}>BIT Program</h3></a>
-                <p style={{fontSize: '17px'}}>kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f</p>
+                <Card
+                    title="Clean Code Solutions"
+                    info={["React Developer"]}
+                    content="kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f"
+                />
             </div>
     },
   ]
@@ -143,7 +177,13 @@ export default () => {
                         }
                         key={index}
                     >
-                        {content}
+                        <div
+                            style={{
+                                padding: !screenSize.large ? null : '0 30px',
+                            }}
+                        >
+                            {content}
+                        </div>
                     </TabPane>
                 ))}
             </Tabs>

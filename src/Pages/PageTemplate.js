@@ -8,62 +8,62 @@ export default (props) => {
     const [screenSize] = useScreenSize();
 
     const styles = {
-        animationContainer: 
+        animationContainer:
             screenSize.large ? {
-                position: 'absolute', 
+                position: 'absolute',
                 top: `0px`,
                 left: '0px',
                 zIndex: props.index,
             } : {
-                position: 'absolute', 
+                position: 'absolute',
                 top: '0px',
-                left: `${props.left}px`, 
+                left: `${props.left}px`,
                 zIndex: props.index,
             },
-        mainContainer: 
+        mainContainer:
             screenSize.large ? {
-                display: 'flex', 
+                display: 'flex',
                 flexDirection: 'column-reverse',
                 height: '100vh',
             } : {
-                display: 'flex', 
-                flexDirection: 'row', 
-                width: 'calc(100vw - 210px)', 
+                display: 'flex',
+                flexDirection: 'row',
+                width: 'calc(100vw - 210px)',
                 height: '100vh'
             },
         bodyContainer: {
-            flex: 1, 
+            flex: 1,
             backgroundColor: 'white',
-            overflow: 'hidden' 
+            overflow: 'hidden'
         },
-        titleContainer: 
+        titleContainer:
             screenSize.large ? {
                 height: '50px',
                 backgroundColor: '#222222',
             } : {
-                width: '70px', 
-                backgroundColor: '#222222', 
-                display: 'flex', 
-                flexDirection: 'column', 
-                justifyContent: 'flex-start', 
+                width: '70px',
+                backgroundColor: '#222222',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-start',
                 overflow: 'hidden',
             },
         hover: {
             backgroundColor: color.primary
         },
-        title: 
+        title:
             screenSize.large ? {
                 marginLeft: '20px',
                 fontSize: '2.15em',
                 color: 'white'
             } : {
-                transform: 'rotate(90deg)', 
-                margin: '20px 0 0 0', 
-                fontSize: '4em', 
+                transform: 'rotate(90deg)',
+                margin: '20px 0 0 0',
+                fontSize: '4em',
                 color: 'white'
             },
     }
-    
+
     return(
         <>
             <TweenOne
@@ -72,7 +72,7 @@ export default (props) => {
                         y: (window.innerHeight),
                         duration: 500,
                     } : {
-                        x: -(window.innerWidth - 280), 
+                        x: -(window.innerWidth - 280),
                         duration: 500,
                     }
                 }
@@ -84,8 +84,8 @@ export default (props) => {
                     <div style={styles.bodyContainer}>
                         {props.page}
                     </div>
-                    <div 
-                        style={props.animation.open ? {...styles.titleContainer, ...styles.hover} : styles.titleContainer} 
+                    <div
+                        style={props.animation.open ? {...styles.titleContainer, ...styles.hover} : styles.titleContainer}
                         onMouseEnter={() => {
                             if(!screenSize.large) props.onMouseEnter()
                         }}
