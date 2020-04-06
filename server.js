@@ -29,10 +29,10 @@ app.post('/send-email', (req, res) => {
     email,
     name,
     subject,
-    message
+    body
   } = req.body
 
-  if(email && name && subject && message){
+  if(email && name && subject && body){
     transporter.sendMail({
       from: `${email}`,
       to: 'Sean MacKay <seanallanmackay@gmail.com>',
@@ -40,7 +40,7 @@ app.post('/send-email', (req, res) => {
       subject: `Email from ${name} via seanmackay.ca`,
       html: ` <p><span style="font-weight: bold;">Name:</span> ${name}</p>
               <p><span style="font-weight: bold;">Subject:</span> ${subject}</p>
-              <p><span style="font-weight: bold;">Message:</span> ${message}</p>`,
+              <p><span style="font-weight: bold;">Message:</span> ${body}</p>`,
     }, (error, info) => {
       if(error){
         console.log(error)
