@@ -55,12 +55,16 @@ const onSubmit = async (test) => {
 
   const response = await fetch('send-email', {
     method: 'POST',
-    body: {
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+  },
+    body: JSON.stringify({
       name,
       email,
       subject,
       body
-    }
+    })
   })
 
   if(response.status === 200){
