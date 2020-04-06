@@ -43,12 +43,14 @@ app.post('/send-email', (req, res) => {
               <p><span style="font-weight: bold;">Message:</span> ${message}</p>`,
     }, (error, info) => {
       if(error){
+        console.log(error)
         res.status(500).send({ success: false, message: "There was an error sending this email." })
       } else {
         res.status(200).send({ success: true, message: "Email sent" })
       }
     })
   } else {
+    console.log(req)
     res.status(500).send({ success: false, message: "There was an error sending this email." })
   }
 
