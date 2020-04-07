@@ -95,8 +95,8 @@ export default () => {
                 marginBottom: '50px'
               }}
             >
-              Hello person reading this, my name is Sean. I'm a fullstack web developer with an a special
-              affection for UI/UX design. That is to say, I make websites do cool stuff and look good doing it.
+              Hello person reading this, my name is Sean. I'm a fullstack web developer with a special
+              affection for UI/UX design. That is to say, I make pretty websites that do cool things.
 
             </p>
             <p
@@ -106,8 +106,8 @@ export default () => {
                 marginBottom: '50px'
               }}
             >
-              I'm not as good at writing about myself as I am writing about said websites, so if you're interested
-              in seeing some stuff I've done, just head on over and take a look at some of my projects.
+              I'm not as good at writing about myself as I am my work, so if you're interested
+              in seeing some of the stuff I've done, just head on over and take a look at my projects.
             </p>
           </div>
         </TweenOne>

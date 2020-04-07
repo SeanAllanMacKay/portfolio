@@ -57,7 +57,7 @@ export default () => {
             }
             stack={{
               Frontend: <a href='https://reactjs.org/' target="_blank" rel="noopener noreferrer">React</a>,
-              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/'>Express</a></>,
+              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/' target="_blank" rel="noopener noreferrer">Express</a></>,
               Database: <a href='https://www.mongodb.com/' target="_blank" rel="noopener noreferrer">MongoDB</a>,
             }}
             libraries={[
@@ -91,7 +91,7 @@ export default () => {
             description={
               <>
                 <p>
-                  To learn React, I decided to make a real-time mobile game. I would not recommend doing that. The game is based off of Jackbox's <a href='https://jackboxgames.com/quiplash/' target="_blank" rel="noopener noreferrer">Quiplash</a> and <a href='https://jackboxgames.com/quiplash/' target="_blank" rel="noopener noreferrer">Cards Against Humanity</a>. I was tired of having to bring a device/box of cards everywhere I wanted to play a game like this with my friends, so I built one.
+                  To learn React, I decided to make a real-time mobile game. I would not recommend doing that. The game is based off of Jackbox's <a href='https://jackboxgames.com/quiplash/' target="_blank" rel="noopener noreferrer">Quiplash</a> and <a href='https://cardsagainsthumanity.com/' target="_blank" rel="noopener noreferrer">Cards Against Humanity</a>. I was tired of having to bring a device/box of cards everywhere I wanted to play a game like this with my friends, so I built one.
                 </p>
 
                 <p>
@@ -101,7 +101,7 @@ export default () => {
             }
             stack={{
               Frontend: <a href='https://reactjs.org/' target="_blank" rel="noopener noreferrer">React</a>,
-              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/'>Express</a></>,
+              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/' target="_blank" rel="noopener noreferrer">Express</a></>,
               Database: <a href='https://www.mongodb.com/' target="_blank" rel="noopener noreferrer">MongoDB</a>,
               Hosting: <a href='https://devcenter.heroku.com/' target="_blank" rel="noopener noreferrer">Heroku</a>,
             }}
@@ -140,7 +140,7 @@ export default () => {
             }
             stack={{
               Frontend: <a href='https://reactjs.org/' target="_blank" rel="noopener noreferrer">React</a>,
-              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/'>Express</a></>,
+              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/' target="_blank" rel="noopener noreferrer">Express</a></>,
               Database: <a href='https://www.mongodb.com/' target="_blank" rel="noopener noreferrer">MongoDB</a>,
               Hosting: <a href='https://devcenter.heroku.com/' target="_blank" rel="noopener noreferrer">Heroku</a>,
             }}
@@ -150,10 +150,10 @@ export default () => {
               <a href='https://storybook.js.org/' target="_blank" rel="noopener noreferrer">Storybook</a>
             ]}
             links={[
-              !screenSize.large && <Link
-                onClick={() => setAdvancedElectricEnergyModalOpen(true)}
-                icon={phoneIcon}
-              />,
+              //!screenSize.large && <Link
+                //onClick={() => setAdvancedElectricEnergyModalOpen(true)}
+                //icon={phoneIcon}
+              ///>,
               <Link
                 href='http://www.advancedelectricenergy.ca/'
                 icon={wwwLogo}
@@ -169,7 +169,7 @@ export default () => {
             description={
               <>
                 <p>
-                  This is by far my most ambitious project. The concept is creating a project management tool tailored made for contractors with a focus on collaboration. Feel free to make an account and poke around. Be warned though that there are a bunch of dead ends and partially completed sections. This is definitely a work in progress.
+                  This is by far my most ambitious project. The concept is creating a project management tool tailor made for contractors with a focus on collaboration. Feel free to make an account and poke around. Be warned though that there are a bunch of dead ends and partially completed sections. This is definitely a work in progress.
                 </p>
 
                 <p>
@@ -179,7 +179,7 @@ export default () => {
             }
             stack={{
               Frontend: <a href='https://reactjs.org/' target="_blank" rel="noopener noreferrer">React</a>,
-              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/'>Express</a></>,
+              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/' target="_blank" rel="noopener noreferrer">Express</a></>,
               Database: <a href='https://www.mongodb.com/' target="_blank" rel="noopener noreferrer">MongoDB</a>,
               Hosting: <a href='https://devcenter.heroku.com/' target="_blank" rel="noopener noreferrer">Heroku</a>,
               CDN: <a href='https://aws.amazon.com/s3/' target="_blank" rel="noopener noreferrer">S3</a>,
@@ -210,13 +210,13 @@ export default () => {
                 </p>
 
                 <p>
-                  It's almost entirely frontend, save fot the contact page emailing functionality. You can click around and see all the little stuff throughout.
+                  It's almost entirely frontend, except for the contact page emailing functionality. You can click around and see all the little stuff throughout.
                 </p>
               </>
             }
             stack={{
               Frontend: <a href='https://reactjs.org/' target="_blank" rel="noopener noreferrer">React</a>,
-              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/'>Express</a></>,
+              Server: <><a href='https://nodejs.org/en/about/' target="_blank" rel="noopener noreferrer">Node</a>/<a href='https://expressjs.com/' target="_blank" rel="noopener noreferrer">Express</a></>,
               Database: <a href='https://www.mongodb.com/' target="_blank" rel="noopener noreferrer">MongoDB</a>,
             }}
             links={[

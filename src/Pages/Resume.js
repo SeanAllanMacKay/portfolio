@@ -48,42 +48,77 @@ const Card = ({ title, info, content }) => (
 const skills = [
     {
         title: 'Javascript',
-        description: "Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te. Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an. Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,an assueverit contentiones est.",
+        description: "A scripting or programming language that allows you to implement complex features on web pages. In the last decade, it has gone from one of the three languages  of the internet (the others being HTML and CSS) to a full blown ecosystem that is the backbone of modern web development",
         icon: <Icon component={JavascriptLogo} style={{fontSize: '2.5em', color: '#A5037A'}}/>
     },
     {
         title: 'React',
-        description: "Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te. Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an. Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,an assueverit contentiones est.",
+        description: "A Javascript library (not a framework, but kind of a framework) that allows for dynamic webpages and more natural UI/UX. By far the most popular of the frontend JS libraries/frameworks. Used in most of my personal projects, and extensively in my work experience",
         icon: <Icon component={ReactLogo} style={{fontSize: '2.5em', color: '#A5037A'}}/>,
     },
     {
         title: 'Ruby / Rails',
-        description: "Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te. Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an. Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,an assueverit contentiones est.",
+        description: "A super quick and easy language for prototyping and CRUD applications. It was created to take a bunch of the setup out of the development of web applications. Not my first choice, but it's hard to beat the speed of programming that this allows. Used in the development of my web development cources in school",
         icon: <Icon component={RubyOnRailsLogo} style={{fontSize: '2.5em', color: '#A5037A'}}/>,
     },
     {
         title: 'C# / .Net',
-        description: "Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te. Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an. Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,an assueverit contentiones est.",
+        description: 'The tried and true "Microsoft Java". A strongly-typed object-oriented powerhouse that has been around since the year 2000. Most of my experience with C# has been through school assignments using the MVC framework of .NET. I love how secure this language is, but is not as rapid as I would like',
         icon: <Icon component={CSharpLogo} style={{fontSize: '2.5em', color: '#A5037A'}}/>
     },
     {
         title: 'NodeJS',
-        description: "Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te. Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an. Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,an assueverit contentiones est.",
+        description: "People love Javascript so much, they put it on the backend. A single-threaded (mostly) server-side language built on C++ and the Chromium engine. I've used this extensively on every personal project I've ever undertaken. It allows for easily implemented real-time socket communication",
         icon: <Icon component={NodeLogo} style={{fontSize: '2.5em', color: '#A5037A'}}/>,
     },
     {
         title: 'MongoDB',
-        description: "Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te. Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an. Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,an assueverit contentiones est.",
+        description: 'A NoSQL database that is based on JSON documents. Guess what the "J" in JSON stands for? Yup, Javascript. I like using what is known as the MERN stack. Mongo, Express, React, and Node because it relies on a single underlying language. SQL is great, but I personally prefer NoSQL most of the time',
         icon: <Icon component={MongoLogo} style={{fontSize: '2.5em', color: '#A5037A'}}/>
     },
     {
-        title: 'CSS / Sass / Less',
-        description: "Lorem ipsum dolor sit amet, no semper complectitur eam. Est ferri dicant salutatus te. Possim option eruditi no per, mei homero tractatos ne, sed ipsum delectus accusata an. Eu sit illud urbanitas, vix lobortis elaboraret referrentur ei. Ea mel mentitum deleniti,an assueverit contentiones est.",
+        title: 'CSS / SASS / LESS',
+        description: "I chose to group these as they all handle styling. CSS is the original styling language, and what SASS and LESS are based off of. SASS and LESS are style pre-processors that allow to do things like add variables to your styles. I personally prefer React's inline styling, but it is also based on CSS",
         icon: <Icon component={CssLogo} style={{fontSize: '2.5em', color: '#A5037A'}}/>
     },
 ]
 
 const timelineItems = [
+    {
+        title: 'Work',
+        dot: <DesktopWindows style={{ margin: '0 10px 0 0' }}/>,
+        content:
+            <>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <Card
+                        title="HippoCMMS"
+                        info={["Co-Op Student",  "Software Developer"]}
+                        content="I was brought on as a student for my CO-OP term of school and was subsequently hired in a developer position afterward. I mainly work on the frontend team, implementing designs and
+                                working with the backend team to develop a RESTful API."
+                    />
+                </div>
+
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <Card
+                        title="Clean Code Solutions"
+                        info={["React Developer"]}
+                        content="I worked in a part-time capacity creating re-usable React components for small data management applications. The work was almost exclusively on the frontend side, but occasionally
+                                spilled over into QA testing and bug fixes/"
+                    />
+                </div>
+            </>
+    },
+    //{
+    //    title: 'Freelance',
+    //    dot: <Laptop style={{ margin: '0 10px 0 0' }}/>,
+    //    content:
+    //        <div style={{display: 'flex', flexDirection: 'column'}}>
+    //            <Card
+    //                title="Advanced Electric Energy"
+    //                content="This "
+    //            />
+    //        </div>
+    //},
     {
         title: 'School',
         dot: <School style={{ margin: '0 10px 0 0' }} />,
@@ -92,37 +127,14 @@ const timelineItems = [
                 <Card
                     title="College Sturgeon Heights Collegiate"
                     info={["Digital Media Certificate", "Advanced Academic Diploma"]}
-                    content="kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f"
+                    content="I heavily focused on media arts such as graphic design throughout my four years of highschool. I took programming courses as well, but only started taking web development seriously afterward."
                 />
 
                 <Card
                     title="Red River College"
                     info={["Business Information Technology (BIT) Program"]}
-                    content="kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f"
-                />
-            </div>
-    },
-    {
-        title: 'Work',
-        dot: <DesktopWindows style={{ margin: '0 10px 0 0' }}/>,
-        content:
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-                <Card
-                    title="HippoCMMS"
-                    info={["Co-Op Student",  "Software Developer"]}
-                    content="kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f"
-                />
-            </div>
-    },
-    {
-        title: 'Freelance',
-        dot: <Laptop style={{ margin: '0 10px 0 0' }}/>,
-        content:
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-                <Card
-                    title="Clean Code Solutions"
-                    info={["React Developer"]}
-                    content="kladnfijadnfi jk ajufeif ewjfg ue fieq fieq fi eqjlf ewh gioeq fjeq if equf kqe fiueqwbfrjkeq fjeq ifn eqwjfgb eqojg aslkv eqhjfr fkhueq flja gkljae fgu eqfgoui eqqljf aeklu f"
+                    content="I took one semester of Computer Science courses at the University of Winnipeg before making the jump to Red River's BIT program at the recommendation of my brother, a UofW computer science grad.
+                            The main draw was Red River's focus on practical experience, but I have found that there is also strong emphasis put on theory and architecture."
                 />
             </div>
     },
