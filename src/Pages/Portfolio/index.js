@@ -8,7 +8,9 @@ import AdvancedElectricEnergyModal from "../../Components/AdvancedElectricEnergy
 import { Menu, Tabs } from "antd";
 
 import portfolioImage from "../../images/Portfolio/portfolio.jpg";
+import contractorImage from "../../images/Portfolio/contractor.jpg";
 import electricImage from "../../images/Portfolio/electric.jpg";
+import phoneImage from "../../images/Portfolio/phone.jpg";
 
 import { ReactComponent as GithubLogo } from "../../images/logos/github-logo.svg";
 import { ReactComponent as wwwLogo } from "../../images/logos/www.svg";
@@ -18,10 +20,8 @@ const { Item } = Menu;
 export default () => {
   const [screenSize] = useScreenSize();
   const [active, setActive] = useState("0");
-  const [
-    advancedElectricEnergyModalOpen,
-    setAdvancedElectricEnergyModalOpen,
-  ] = useState(false);
+  const [advancedElectricEnergyModalOpen, setAdvancedElectricEnergyModalOpen] =
+    useState(false);
 
   return (
     <div
@@ -40,8 +40,108 @@ export default () => {
       >
         {active === "0" && (
           <Project
+            title="Ordinly"
+            image={contractorImage}
+            description={
+              <>
+                <p>
+                  By far my largest undertaking. I wanted to build something
+                  that was intended for widespread usage. That entailed:
+                </p>
+
+                <ul>
+                  <li>
+                    Containerizing the different services for horizontal scaling
+                  </li>
+                  <li>Separating DBs for different services</li>
+                  <li>CDN storage of files and images</li>
+                  <li>
+                    Using cross-service communication tools such as Redis and
+                    Kafka
+                  </li>
+                  <li>Performance driven RESTful API</li>
+                </ul>
+
+                <p>
+                  It uses a lot of the technologies I've used elsewhere, and a
+                  whole lot more on top
+                </p>
+              </>
+            }
+            stack={{
+              Frontend: (
+                <>
+                  <a
+                    href="https://reactjs.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    React
+                  </a>
+                  /
+                  <a
+                    href="https://nextjs.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    NextJS
+                  </a>
+                </>
+              ),
+              Server: (
+                <>
+                  <a
+                    href="https://nodejs.org/en/about/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Node
+                  </a>
+                  /
+                  <a
+                    href="https://expressjs.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Express
+                  </a>
+                </>
+              ),
+              "Reverse proxy": (
+                <a
+                  href="https://www.nginx.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  NGINX
+                </a>
+              ),
+              Balancer: (
+                <a
+                  href="https://kafka.apache.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Kafka
+                </a>
+              ),
+              Database: (
+                <a
+                  href="https://www.mongodb.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MongoDB
+                </a>
+              ),
+            }}
+            links={[<Link href="https://ordinly.com" icon={wwwLogo} />]}
+          />
+        )}
+        {active === "1" && (
+          <Project
             title="Moonvesting"
-            image={portfolioImage}
+            image={phoneImage}
             description={
               <>
                 <p>
@@ -105,7 +205,7 @@ export default () => {
           />
         )}
 
-        {active === "1" && (
+        {active === "2" && (
           <Project
             title="Advanced Electric Energy"
             image={electricImage}
@@ -204,7 +304,7 @@ export default () => {
           />
         )}
 
-        {active === "4" && (
+        {active === "3" && (
           <Project
             title="This Website"
             image={portfolioImage}
@@ -282,12 +382,15 @@ export default () => {
           onSelect={({ key }) => setActive(key)}
         >
           <Item key="0">
-            <span style={{ fontSize: "17px" }}>Moonvesting</span>
+            <span style={{ fontSize: "17px" }}>Ordinly</span>
           </Item>
           <Item key="1">
+            <span style={{ fontSize: "17px" }}>Moonvesting</span>
+          </Item>
+          <Item key="2">
             <span style={{ fontSize: "17px" }}>Advanced Electric Energy</span>
           </Item>
-          <Item key="4">
+          <Item key="3">
             <span style={{ fontSize: "17px" }}>This Website</span>
           </Item>
         </Menu>
@@ -313,8 +416,12 @@ export default () => {
             onChange={(key) => setActive(key)}
           >
             <Tabs.TabPane
-              tab={<span style={{ fontSize: "17px" }}>Moonvesting</span>}
+              tab={<span style={{ fontSize: "17px" }}>Ordinly</span>}
               key="0"
+            />
+            <Tabs.TabPane
+              tab={<span style={{ fontSize: "17px" }}>Moonvesting</span>}
+              key="1"
             />
             <Tabs.TabPane
               tab={
@@ -322,11 +429,11 @@ export default () => {
                   Advanced Electric Energy
                 </span>
               }
-              key="1"
+              key="2"
             />
             <Tabs.TabPane
               tab={<span style={{ fontSize: "17px" }}>This Website</span>}
-              key="4"
+              key="3"
             />
           </Tabs>
         </div>
